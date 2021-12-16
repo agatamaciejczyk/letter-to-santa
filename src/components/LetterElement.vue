@@ -30,7 +30,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import * as Vue from 'vue';
+
+export default Vue.defineComponent({
   props: {
     name: {
       type: String,
@@ -49,7 +51,7 @@ export default {
       required: true,
     },
   },
-  data: (): any => ({
+  data: () => ({
     detailsAreVisible: false,
   }),
   methods: {
@@ -57,7 +59,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
   },
-};
+});
 </script>
 
 <style scoped lang="scss">
